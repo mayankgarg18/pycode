@@ -5,6 +5,9 @@ import uuid # to scan all Mac address in current Network
 import os # to access operating system commands
 import webbrowser #to access web browser
 
+
+
+
 menu='''
 Press 1 to check current time and date :
 Press 2 to scan all your Mac address in your currnet connected Network :
@@ -20,7 +23,7 @@ Press 8 to list ip address of given website :
 print menu 
 choice=raw_input()
 
-  
+
 if choice == '1' :
        print "Current time and date is : ",time.ctime()
 
@@ -29,12 +32,18 @@ elif choice == '2' :
        time.sleep(2)
        print (hex(uuid.getnode()))
 
+elif choice == '3' :
+       print("oops system ShuttingDown....")
+       time.sleep(900) #to wait for 15 min. 
+       os.system("shutdown now -h") #to shut down the system
+
+
 elif choice == '4':
        find=raw_input("What do you want to search :")
        webbrowser.open_new_tab("https://www.google.com/search?q="+find) # to search on google anything you want
-
       
-
+   
+           
 
 else :
-    print "Invalid Option"
+    print"Invalid Option"
