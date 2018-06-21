@@ -20,7 +20,7 @@ Press 8 to list ip address of given website :
 print menu 
 choice=raw_input()
 
-
+  
 if choice == '1' :
        print "Current time and date is : ",time.ctime()
 
